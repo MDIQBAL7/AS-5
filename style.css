@@ -1,0 +1,5 @@
+.grid-style{
+    display: grid;
+    grid-template-columns: 7fr 2.5fr;
+    column-gap: 20px;
+}
