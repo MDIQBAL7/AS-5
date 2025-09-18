@@ -61,3 +61,21 @@ for(let i = 0; i < getCallIcon.length; i++){
 } 
 
 // call functionality end
+
+
+// copy button functionality start 
+let copyBtn = document.getElementsByClassName('copy-btn');
+for(let i = 0; i < copyBtn.length; i++){
+    copyBtn[i].addEventListener("click", () => {
+    let btnParents = copyBtn[i].parentNode.parentNode;
+    let getC1 = btnParents.children[1];
+    let phoneNumber = getC1.children[2].innerText;
+
+  navigator.clipboard.writeText(phoneNumber).then(() => {
+    alert("Phone number copied: " + phoneNumber);
+  }).catch(err => {
+    console.error("Failed to copy: ", err);
+  });
+});
+}       
+// copy button functionality end
