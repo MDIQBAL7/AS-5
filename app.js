@@ -54,6 +54,10 @@ for(let i = 0; i < getCallIcon.length; i++){
             </div>
         `;
         historyContainer.appendChild(div);
+        document.getElementById('clear-btn').addEventListener('click', function(){
+            historyContainer.innerText = '';
+        })
     })
 } 
+
 // call functionality end
