@@ -24,7 +24,20 @@ for(let i = 0; i < getCallIcon.length; i++){
         // get coin tag 
         let coin =  document.getElementById('coin');
         let coinToNum = parseInt(coin.innerText);
-        alert(`${getChild2} ${getChild3}`);  
+       if(coinToNum < 20){
+            alert("আপনার পর্যাপ্ত কয়েন নেই, কল করতে কমপক্ষে ২০ কয়েন লাগবে");
+            return;
+        }else{
+            alert(`${getChild2} ${getChild3}`);  
+            coin.innerText = coinToNum - 20;
+        }
+            
+            // the code was execute when alert done 
+        const callInfo = {
+            title : getChild2,
+            number : getChild3,
+            date : new Date().toLocaleTimeString()
+        };
         
        
           
