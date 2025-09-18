@@ -73,6 +73,9 @@ for(let i = 0; i < copyBtn.length; i++){
 
   navigator.clipboard.writeText(phoneNumber).then(() => {
     alert("Phone number copied: " + phoneNumber);
+    let getCopyCount = document.getElementById('copy-count');
+    let copyNum = parseInt(getCopyCount.innerText);
+    getCopyCount.innerText = copyNum + 1;
   }).catch(err => {
     console.error("Failed to copy: ", err);
   });
